@@ -2,7 +2,7 @@
 
 <h1>Books</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Book title</th>
@@ -25,3 +25,7 @@
 <br>
 
 <%= link_to 'New Book', new_book_path %>
+<%= link_to root_path, class: 'btn btn-success' do %>
+  <div class="fa fa-home"></div>
+  Home
+<% end %>

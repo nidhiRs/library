@@ -2,7 +2,7 @@
 
 <h1>Authors</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>First name</th>
@@ -29,3 +29,7 @@
 <br>
 
 <%= link_to 'New Author', new_author_path %>
+<%= link_to root_path, class: 'btn btn-success' do %>
+  <div class="fa fa-home"></div>
+  Home
+<% end %>
