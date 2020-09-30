@@ -1,0 +1,13 @@
+<%= simple_form_for(@book) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <div class="form-inputs">
+    <%= f.label :book_title %>
+    <%= f.text_field :book_title %>
+    <%= f.label :author %>
+    <%= f.select :author_ids, Author.all.collect{ |author| [author.full_name, author.id]}, {:include_blank => true}, {:multiple => true, :size =>10}  %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
